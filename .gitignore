@@ -33,10 +33,7 @@ hs_err_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-.idea
-.idea/*
-.idea/**
-.jpb
+
 
 # Generated files
 .idea/**/contentModel.xml
@@ -67,6 +64,10 @@ hs_err_pid*
 # .idea/modules
 # *.iml
 # *.ipr
+.idea
+.idea/*
+.idea/**
+.jpb
 
 # CMake
 cmake-build-*/

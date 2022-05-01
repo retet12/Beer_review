@@ -28,10 +28,10 @@ public class User {
     private String password;
 
     @Size(min = 5, max = 30)
-    private String firstname;
+    private String firstName;
 
     @Size(min = 5, max = 30)
-    private String lastname;
+    private String lastName;
 
     @Pattern(regexp = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;

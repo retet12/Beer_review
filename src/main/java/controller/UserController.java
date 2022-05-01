@@ -1,6 +1,9 @@
 package controller;
 
 import entity.User;
+import exception.ExistsException;
+import exception.InvalidException;
+import exception.NotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

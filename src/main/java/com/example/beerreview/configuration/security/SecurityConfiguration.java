@@ -55,7 +55,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
                 .antMatchers(ADMIN_ENDPOINT).hasAuthority("ADMIN")
                 .antMatchers(HttpMethod.GET, PUBLIC_URLS).permitAll()
-                .antMatchers("/db/**").permitAll()
+//                .antMatchers("/db/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JWTConfig(jwtTokenProvider));

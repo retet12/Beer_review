@@ -1,12 +1,13 @@
 package com.example.beerreview.configuration.security.jwt;
 
-import com.example.beerreview.entity.User;
 import com.example.beerreview.entity.Role;
 import com.example.beerreview.entity.Status;
+import com.example.beerreview.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,4 +30,5 @@ public class GenerateJWTUser {
                 .map(role -> new SimpleGrantedAuthority(role.getTypeOfRole()))
                 .collect(Collectors.toList());
     }
+
 }

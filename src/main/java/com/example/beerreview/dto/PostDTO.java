@@ -1,5 +1,6 @@
 package com.example.beerreview.dto;
 
+import com.example.beerreview.entity.Rating;
 import com.example.beerreview.entity.User;
 import com.example.beerreview.enums.PostType;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,9 @@ public class PostDTO {
 
     @NotNull
     private PostType postType;
+
+    @NotNull
+    private Rating rating;
 
     @NotNull
     private String contents;

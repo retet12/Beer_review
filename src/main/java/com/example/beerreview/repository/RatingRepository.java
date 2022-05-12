@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Component
 @Repository
-public interface RatingRepository extends JpaRepository<Rating,Long> {
-    Optional<Rating> findByRating (float stars);
+public interface RatingRepository extends JpaRepository<Rating, Long> {
+    Optional<Rating> findByRatingAndPostIdAndUserId(Float stars, Long postId, Long userId);
+    Optional<Rating> findRatingBy(Float stars);
 }

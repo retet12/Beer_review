@@ -25,14 +25,7 @@ import java.util.List;
 @Api(tags = "Category", description = "Operations with category")
 @RequestMapping("/api/v1/category")
 public class CategoryController {
-    @Value("${invalidInput}")
-    private String msgInvalidInput;
 
-    @Value("${notFound}")
-    private String msgNotFound;
-
-    @Value("${exists}")
-    private String msgExists;
     private final CategoryRepository categoryRepository;
 
     public CategoryController(CategoryRepository categoryRepository) {

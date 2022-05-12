@@ -1,6 +1,7 @@
 package com.example.beerreview.entity;
 
 import com.example.beerreview.enums.PostType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -46,18 +47,23 @@ public class Post {
     @OneToOne
     private Brand brand;
 
+    @JsonIgnore
     @ManyToOne
     private Rating rating;
 
+    @JsonIgnore
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private User user;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
     private List<Comment> comments;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
     private List<Tag> tags;
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
     private List<Category> categories;
 }

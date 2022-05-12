@@ -27,7 +27,9 @@ public class TagController {
     @ApiResponse(responseCode = "405", description = "Invalid input")
     @ApiOperation(value = "Save tag", notes = "This can only be done by the logged in user", authorizations = { @Authorization(value="apiKey") })
     @PostMapping
-    public ResponseEntity<Tag> save(@Valid @RequestBody Tag tag, BindingResult bindingResult){
+    public ResponseEntity<Tag> save(@Valid
+                                        @ApiParam(value = "The tag that needs to be fetched.",example = "tag")
+                                        @RequestBody Tag tag, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             throw new InvalidException();
         }
@@ -43,7 +45,9 @@ public class TagController {
     @ApiResponse(responseCode = "404", description = "Tag not found")
     @ApiOperation(value = "Delete tag", notes = "This can only be done by the logged in user", authorizations = { @Authorization(value="apiKey") })
     @DeleteMapping(produces = "application/json")
-    public void delete(@RequestBody Tag tag){
+    public void delete(@Valid
+                       @ApiParam(value = "The tag needs remove",example = "tag")
+                       @RequestBody Tag tag){
         if (tagRepository.findByName(tag.getName()).isEmpty()){
             throw  new NotFoundException();
         }

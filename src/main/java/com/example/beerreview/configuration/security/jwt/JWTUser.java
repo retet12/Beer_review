@@ -13,12 +13,11 @@ public class JWTUser implements UserDetails {
     private final String firstName;
     private final String lastName;
     private final String email;
-    private final String phone;
     private final boolean enabled;
     private final Collection<? extends GrantedAuthority> authorities;
 
     public JWTUser(long id, String username, String password, String firstName,
-                   String lastName, String email, String phone, Collection<? extends GrantedAuthority> authorities,
+                   String lastName, String email, Collection<? extends GrantedAuthority> authorities,
                    boolean enabled
     ) {
         this.id = id;
@@ -27,7 +26,6 @@ public class JWTUser implements UserDetails {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.phone = phone;
         this.authorities = authorities;
         this.enabled = enabled;
     }
@@ -49,9 +47,6 @@ public class JWTUser implements UserDetails {
         return email;
     }
 
-    public String getPhone() {
-        return phone;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

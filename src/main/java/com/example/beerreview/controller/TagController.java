@@ -1,5 +1,6 @@
 package com.example.beerreview.controller;
 
+import com.example.beerreview.entity.Tag;
 import com.example.beerreview.exception.InvalidException;
 import com.example.beerreview.exception.NotFoundException;
 import com.example.beerreview.repository.TagRepository;
@@ -30,7 +31,7 @@ public class TagController {
         if (bindingResult.hasErrors()){
             throw new InvalidException();
         }
-        if (tagRepository.findByName(tag.).isPresent()){
+        if (tagRepository.findByName(tag.getName()).isPresent()){
             throw new NotFoundException();
         }
 

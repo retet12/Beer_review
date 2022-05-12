@@ -17,8 +17,8 @@ public class RatingValidator {
     @Value("${invalidUserIdOrPostId}")
     private String msgInvalidUserIdOrPostId;
 
-    private final UserRepository userRepository;
-    private final PostRepository postRepository;
+    private UserRepository userRepository;
+    private PostRepository postRepository;
 
     public RatingValidator(UserRepository userRepository, PostRepository postRepository) {
         this.userRepository = userRepository;

@@ -33,7 +33,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "User not found")
     })
     @ApiOperation(value = "Get user by user name", authorizations = {@Authorization(value = "apiKey")})
-    @GetMapping(value = "/{username}", produces = "application/json")
+    @GetMapping(value = "/{username}")
     public ResponseEntity<User> get(@ApiParam(value = "The name that needs to be fetched. Use user1 for testing", example = "username")
                                     @PathVariable("username") String username) {
 

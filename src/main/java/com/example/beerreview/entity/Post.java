@@ -1,7 +1,6 @@
 package com.example.beerreview.entity;
 
 import com.example.beerreview.enums.PostType;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -34,6 +33,18 @@ public class Post {
 
     @NotNull
     private String contents;
+
+    @NotNull
+    private String strength;
+
+    @NotNull
+    private String placeProduction;
+
+    @NotNull
+    private String size;
+
+    @OneToOne
+    private Brand brand;
 
     @ManyToOne
     private Rating rating;

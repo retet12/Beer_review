@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@Api(tags = "Post", description = "Access to posts")
+@Api(tags = "Post")
 @RequestMapping("/api/v1/post")
 public class PostController {
     private final PostRepository postRepository;

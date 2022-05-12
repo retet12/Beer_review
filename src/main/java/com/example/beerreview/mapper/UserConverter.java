@@ -20,7 +20,6 @@ public class UserConverter {
                 .firstName(userDTO.getFirstName())
                 .lastName(userDTO.getLastName())
                 .email(userDTO.getEmail())
-                .phoneNumber(userDTO.getPhone())
                 .build();
     }
 }

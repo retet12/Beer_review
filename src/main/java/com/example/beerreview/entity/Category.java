@@ -29,7 +29,6 @@ public class Category {
 
     private long countSubscriber;
 
-    @JsonIgnore
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Post post;
 }

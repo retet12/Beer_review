@@ -24,6 +24,7 @@ public class Post {
     private String title;
 
     @NotNull
+    @Column(name = "created_date")
     private LocalDateTime createDate;
 
     @NotNull

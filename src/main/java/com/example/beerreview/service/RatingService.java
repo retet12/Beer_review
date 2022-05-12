@@ -30,7 +30,6 @@ public class RatingService {
     public RatingService() {
     }
 
-
     public Rating addRating(float rating, long postId, long userId) {
         if (ratingRepository.findByRatingAndPostIdAndUserId(rating, postId, userId).isPresent()) {
             throw new ExistsException();

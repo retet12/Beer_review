@@ -67,6 +67,10 @@ hs_err_pid*
 .idea
 .idea/*
 .idea/**
+.jpb
+.mvn
+.mvn/*
+.mvn/**
 
 # CMake
 cmake-build-*/

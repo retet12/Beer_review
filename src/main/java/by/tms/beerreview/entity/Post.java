@@ -33,20 +33,20 @@ public class Post {
     @NotNull
     private PostType postType;
 
-//    @NotNull
-//    private String contents;
-//
-//    @NotNull
-//    private String strength;
-//
-//    @NotNull
-//    private String placeProduction;
-//
-//    @NotNull
-//    private String size;
-//
-//    @OneToOne
-//    private Brand brand;
+    @NotNull
+    private String contents;
+
+    @NotNull
+    private String strength;
+
+    @NotNull
+    private String placeProduction;
+
+    @NotNull
+    private String size;
+
+    @OneToOne
+    private Brand brand;
 
     @JsonIgnore
     @ManyToOne

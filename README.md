@@ -39,7 +39,7 @@ An application that allows users to leave reviews of their favorite beer.
 Clone the repository.
 
 ```bash
-git clone https://github.com/LyavonLitvin/diplom-project-management-program-c51.git
+git clone https://github.com/retet12/Beer_review
 ```
 
 Download Apache Tomcat from site and set up application server.
